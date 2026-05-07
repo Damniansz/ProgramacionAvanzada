@@ -10,13 +10,14 @@ on:
       - main
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
-    steps:
+    defaults:
+      run:
+        working-directory: streams
 
+    steps:
       - name: Clonar repositorio
         uses: actions/checkout@v4
 
